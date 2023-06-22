@@ -11,7 +11,7 @@
     'author': 'Rama Altayeb',
     'website': '',
     'category': '',
-    'version': '15.0.0.1',
+    'version': '16.0.0.1',
 
     # any module necessary for this one to work correctly
     'depends': ['product', 'stock', 'sale', 'website_sale'],
