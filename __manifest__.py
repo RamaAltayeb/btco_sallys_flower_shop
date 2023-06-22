@@ -18,6 +18,8 @@
 
     # always loaded
     'data': [
+        'security/groups.xml',
+        'security/flower_product_product_record_rules.xml',
         'security/ir.model.access.csv',
 
         'data/paper_format.xml',

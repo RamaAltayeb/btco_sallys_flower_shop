@@ -8,9 +8,15 @@
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='image_1920']" position="before">
+                     <field name="need_watering" invisible="1"/>
+                     <widget name="web_ribbon" title="Need Watering" bg_color="bg-danger" attrs="{'invisible': [('need_watering', '=', False)]}"/>
+                </xpath>
                  <xpath expr="//field[@name='categ_id']" position="after">
                     <field name="flower_id"
                            attrs="{'invisible': [('product_variant_count', '=', 1)]}"/>
+                    <field name="sequence_id"/>
+                    <field name="gardeners_ids" widget="many2many_tags"/>
                 </xpath>
             </field>
         </record>
