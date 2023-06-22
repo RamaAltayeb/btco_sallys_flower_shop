@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_flower,flower,model_flower,base.group_user,1,1,1,1
 access_flower_water_internal,flower_water,model_flower_water,base.group_user,1,0,0,0
 access_flower_water_gardener,flower_water,model_flower_water,btco_sallys_flower_shop.gardner_user,1,1,1,1
+access_stock_warehouse_weather,flower_water,model_stock_warehouse_weather,base.group_user,1,1,1,1
