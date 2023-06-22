@@ -14,7 +14,7 @@
     'version': '16.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['product', 'stock', 'sale'],
+    'depends': ['product', 'stock', 'sale', 'website_sale'],
 
     # always loaded
     'data': [
@@ -23,5 +23,6 @@
         'views/product_product.xml',
         'views/product_template.xml',
         'views/sale_order.xml',
+        'views/templates.xml',
     ],
 }
