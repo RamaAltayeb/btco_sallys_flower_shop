@@ -11,3 +11,6 @@ class Flower(models.Model):
     season_date_end = fields.Date()
     watering_frequency = fields.Integer(help='Should be watered once every x days')
     watering_amount = fields.Float(help='In milliliters')
+
+    def name_get(self):
+        return [(record.id, '%s (%s)' % (record.name, record.scientific_name)) for record in self]
