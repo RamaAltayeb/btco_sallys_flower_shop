@@ -20,13 +20,17 @@
     'data': [
         'security/ir.model.access.csv',
 
+        'data/paper_format.xml',
         'data/server_actions.xml',
-        
+
         'views/flower.xml',
         'views/product_product.xml',
         'views/product_template.xml',
         'views/sale_order.xml',
         'views/stock_lot.xml',
+
         'views/templates.xml',
+
+        'reports/sale_order_flowers.xml',
     ],
 }
