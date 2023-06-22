@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_product_form_inherit" model="ir.ui.view">
+            <field name="name">product_product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='categ_id']" position="after">
+                    <field name="flower_id"
+                           attrs="{'invisible': [('product_variant_count', '=', 1)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="flower_product_act_window" model="ir.actions.act_window">
+            <field name="name">Flower Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain" >[('is_flower', '=', True)]</field>
+            <field name="context" >{'default_is_flower': True}</field>
+        </record>
+
+        <menuitem name="Flower Products" id="flower_products_menu"
+                  parent="stock.menu_stock_inventory_control" action="flower_product_act_window"/>
+
+    </data>
+</odoo>
